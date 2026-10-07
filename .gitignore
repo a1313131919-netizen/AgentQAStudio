@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+*.pyc
+build/
+dist/
+*.spec
+.browser-smoke-profile/
+.pytest_cache/
+.DS_Store
+Thumbs.db
+*.log
+
+# Local app/session data must never be committed
+browser_profile/
+config.json
+browser_config.json
+test_cases.json
+history.db

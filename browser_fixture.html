@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-Hant">
+<meta charset="utf-8">
+<title>Agent QA Browser Fixture</title>
+<body>
+  <textarea id="prompt"></textarea>
+  <button id="send" type="button">Send</button>
+  <div id="responses"></div>
+  <script>
+    document.getElementById("send").addEventListener("click", () => {
+      const input = document.getElementById("prompt").value;
+      setTimeout(() => {
+        const div = document.createElement("div");
+        div.className = "agent-response";
+        div.textContent = input.includes("A001") ? "訂單 A001 目前配送中" : "收到：" + input;
+        document.getElementById("responses").appendChild(div);
+      }, 120);
+    });
+  </script>
+</body>
+</html>
